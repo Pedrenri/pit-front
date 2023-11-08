@@ -57,7 +57,7 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
       window.location.reload();
     } catch (error) {
       console.log(error);
-      setError(error.response);
+      setError(error.response.data);
     }
   };
 
@@ -88,8 +88,8 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
         "Um email de redefinição de senha foi enviado para o seu endereço de email!"
       );
     } catch (error) {
-      console.log(error);
-      setError(error.response.data.message);
+      console.log(error.response.data);
+      setError(error.response.data);
     }
   };
 
