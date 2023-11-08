@@ -34,7 +34,7 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
       }
 
       const response = await axios.post(
-        `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+        `https://gold-magpie-garb.cyclic.app/${isSignUp ? "signup" : "login"}`,
         { email, password }
       );
 
@@ -83,7 +83,7 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
 
   const handleForgotPassword = async () => {
     try {
-      await axios.post("http://localhost:8000/forgot-password", { email });
+      await axios.post("https://gold-magpie-garb.cyclic.app/forgot-password", { email });
       window.alert(
         "Um email de redefinição de senha foi enviado para o seu endereço de email!"
       );

@@ -21,7 +21,7 @@ const ChatInput = ({ user, clickedUser, getUsersMessages, getClickedUsersMessage
     };
 
     try {
-      await axios.post('http://localhost:8000/message', { message });
+      await axios.post('https://gold-magpie-garb.cyclic.app/message', { message });
       getUsersMessages();
       getClickedUsersMessages();
       setTextArea('');

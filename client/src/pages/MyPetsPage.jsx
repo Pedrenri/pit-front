@@ -19,7 +19,7 @@ const MyPetsPage = () => {
   useEffect(() => {
     const getMyPets = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/dogs", {
+        const response = await axios.get("https://gold-magpie-garb.cyclic.app/dogs", {
           params: { userId },
         });
         setPets(response.data);

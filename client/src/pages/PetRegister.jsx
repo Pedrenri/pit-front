@@ -21,7 +21,7 @@ const PetRegister = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/dog-breeds")
+      .get("https://gold-magpie-garb.cyclic.app/dog-breeds")
       .then((response) => {
         setBreedOptions(response.data);
       })
@@ -35,7 +35,7 @@ const PetRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8000/addpet", {
+      const response = await axios.put("https://gold-magpie-garb.cyclic.app/addpet", {
         formData,
       });
       console.log(response);

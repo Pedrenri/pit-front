@@ -19,7 +19,7 @@ const UpdateUserAcc = ({ setShowModal }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/user", {
+        const response = await axios.get("https://gold-magpie-garb.cyclic.app/user", {
           params: { userId: petId },
         });
         console.log(response.data.full_name);
@@ -42,7 +42,7 @@ const UpdateUserAcc = ({ setShowModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8000/update-user", {
+      const response = await axios.put("https://gold-magpie-garb.cyclic.app/update-user", {
         formData,
       });
       const success = response.status === 200;
@@ -63,7 +63,7 @@ const UpdateUserAcc = ({ setShowModal }) => {
 
   const confirmDelete = async () => {
     try {
-      const response = await axios.delete("http://localhost:8000/user", {
+      const response = await axios.delete("https://gold-magpie-garb.cyclic.app/user", {
         params: { userId: petId },
       });
 

@@ -39,7 +39,7 @@ function VerificationForm() {
     console.log(code)
 
     try {
-      const response = await axios.post("http://localhost:8000/verification", {
+      const response = await axios.post("https://gold-magpie-garb.cyclic.app/verification", {
         verificationCode: code,
         userId,
       });

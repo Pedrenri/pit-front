@@ -21,7 +21,7 @@ const UpdateAcc = ({ setShowModal }) => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/dog", {
+        const response = await axios.get("https://gold-magpie-garb.cyclic.app/dog", {
           params: { petId: petId }
         });
         console.log(response.data.name)
@@ -44,7 +44,7 @@ const UpdateAcc = ({ setShowModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("http://localhost:8000/update-dog", {
+      const response = await axios.put("https://gold-magpie-garb.cyclic.app/update-dog", {
         formData,
       });
       const success = response.status === 200;
@@ -65,7 +65,7 @@ const UpdateAcc = ({ setShowModal }) => {
 
   const confirmDelete = async () => {
     try {
-      const response = await axios.delete("http://localhost:8000/dog", {
+      const response = await axios.delete("https://gold-magpie-garb.cyclic.app/dog", {
         params: { petId },
       });
 
