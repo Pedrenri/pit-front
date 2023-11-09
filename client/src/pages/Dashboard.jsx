@@ -145,7 +145,8 @@ const Dashboard = () => {
                 <div className="card-info bg-white">
                   <h3 className=" drop-shadow-lg text-2xl text-left">
                     {character.name}{character.gender_identity === "male" ? "♂" : "♀"}, <span>{character.age}</span> <br />
-                    <span className="text-lg">{character.breed}</span>
+                    <span className="text-lg">{character?.breed}</span> <br />
+                    <span className="text-lg"> {character?.owner_name? "Dono: " + character.owner_name: ""}</span>
                   </h3>
                 </div>
               </TinderCard>

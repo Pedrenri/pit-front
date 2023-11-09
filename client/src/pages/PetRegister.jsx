@@ -19,6 +19,8 @@ const PetRegister = () => {
   });
   const [breedOptions, setBreedOptions] = useState([]);
 
+  console.log(cookies.UserName)
+
   useEffect(() => {
     axios
       .get("https://gold-magpie-garb.cyclic.app/dog-breeds")

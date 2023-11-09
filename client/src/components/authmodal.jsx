@@ -45,6 +45,7 @@ const AuthModal = ({ setShowModal, setIsSignUp, isSignUp }) => {
 
       if (hasUsername) {
         setCookie("UserName", response.data.userName)
+        setCookie("IsVerified", isVerified)
       }
 
       const success = response.status === 201;

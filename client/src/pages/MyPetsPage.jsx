@@ -96,7 +96,7 @@ const MyPetsPage = () => {
                 alt={pet?.name}
               />
               <p className="pet-name text-center mt-2 font-semibold">
-                {pet?.name}<span className={pet?.gender_identity ==="male"?"text-2xl text-sky-700":"text-2xl text-pink-700"}>{checkSymbol(pet)}</span>
+                {pet?.name}<span className={pet?.gender_identity ==="male"?"pl-2 text-3xl text-sky-700  font-black":"text-3xl pl-2 font-black text-pink-700"}>{checkSymbol(pet)}</span>
               </p>
               <button
                 className="edit-pet-button text-blue-500"
